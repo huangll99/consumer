@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<span id="time"></span>
+
+<script type="text/javascript" src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script type="text/javascript" src="moment.min.js"></script>
+<script type="text/javascript">
+    var t = moment().format('MMMM Do YYYY,h:mm:ss a');
+    $("#time").text(t)
+</script>
+</body>
+</html>

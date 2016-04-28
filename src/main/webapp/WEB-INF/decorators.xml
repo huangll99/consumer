@@ -1,0 +1,23 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>		
+		<pattern>/*.htm</pattern>
+		<pattern>/*.html</pattern>
+		<pattern>/script/*.*</pattern>
+		<pattern>/images/*.*</pattern>
+		<pattern>/css/*.css</pattern>
+		<pattern>/powerTip/*.css</pattern>
+		<pattern>/powerTip/*.js</pattern>
+		<pattern>/powerTip/*.html</pattern>
+		<pattern>/showLog/*</pattern>
+		<pattern>/getLogs/*</pattern>
+		<pattern>/showLogin*</pattern>
+		<pattern>/login*</pattern>
+		<pattern>/logout*</pattern>
+	</excludes>
+    <decorator name="master" page="master.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>
+-->
