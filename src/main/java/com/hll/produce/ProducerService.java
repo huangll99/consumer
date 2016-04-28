@@ -1,5 +1,7 @@
 package com.hll.produce;
 
+import com.hll.model.Order;
+import com.hll.rabbit_consume_framework.RabbitHelper;
 import com.rabbitmq.client.Channel;
 import org.springframework.stereotype.Component;
 
