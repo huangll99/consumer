@@ -21,6 +21,9 @@ public class RabbitHelper {
   static {
     String host = "localhost";
     ConnectionFactory connectionFactory = new ConnectionFactory();
+    connectionFactory.setUsername("guest");
+    connectionFactory.setPassword("guest");
+    connectionFactory.setHost(host);
     try {
       connection = connectionFactory.newConnection();
     } catch (IOException | TimeoutException e) {
