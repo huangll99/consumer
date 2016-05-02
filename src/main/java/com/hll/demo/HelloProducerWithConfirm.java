@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 /**
  * Created by hll on 2016/5/1.
@@ -18,7 +19,8 @@ public class HelloProducerWithConfirm {
   public static void main(String[] args) throws IOException, InterruptedException {
     Channel channel = RabbitHelper.getChannel();
     channel.exchangeDeclare("hello-exchange", "direct", true, false, null);
-    final SortedSet<Long> unconfirmedSet = Collections.synchronizedSortedSet(new TreeSet<Long>());
+    // final SortedSet<Long> unconfirmedSet = Collections.synchronizedSortedSet(new TreeSet<Long>());
+    final SortedSet<Long> unconfirmedSet = new ConcurrentSkipListSet<>();
     channel.addConfirmListener(new ConfirmListener() {
       @Override
       public void handleAck(long deliveryTag, boolean multiple) throws IOException {
