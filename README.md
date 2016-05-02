@@ -7,3 +7,4 @@ rabbitmq实例应用
   实现RabbitConsumer接口，加上@Consumer注解
   在consume方法实现中订阅rabbitmq消息，注册消费回调函数
 
+添加发送确认的demo
