@@ -35,4 +35,8 @@ public class RabbitHelper {
     Channel channel = connection.createChannel();
     return channel;
   }
+
+  public static void close() throws IOException {
+    connection.close();
+  }
 }
