@@ -14,9 +14,11 @@ import java.util.concurrent.TimeoutException;
 public class AlertProducer {
   private static final String AMQP_EXCHANGE = "alerts";
 
-  public static void main(String[] args) throws IOException, TimeoutException {
+  public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
     Channel channel = RabbitHelper.getChannel();
-    channel.basicPublish(AMQP_EXCHANGE,"vv.rate_limit",new AMQP.BasicProperties().builder().contentType("apllication/json").build(),"alert...".getBytes());
-    RabbitHelper.close();
+    for (int i=0;i<10000000;i++){
+      channel.basicPublish(AMQP_EXCHANGE,"vv.rate_limit",new AMQP.BasicProperties().builder().contentType("apllication/json").build(),"alert...".getBytes());
+    }
+
   }
 }
